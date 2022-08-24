@@ -11,5 +11,9 @@ class Venue
         @patrons << patron 
     end 
 
+    def yell_at_patrons
+        @patrons.map { |patron| patron.upcase }
+    end 
+
 
 end

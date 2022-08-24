@@ -1,3 +1,5 @@
+require 'pry'
+
 class Venue
     attr_reader :name, :capacity, :patrons
 
@@ -18,5 +20,9 @@ class Venue
     def over_capacity?
         return true if @patrons.length > @capacity
         false
+    end
+
+    def kick_out
+        @patrons.delete(@patrons.sample) 
     end
 end
